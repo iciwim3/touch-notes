@@ -12,6 +12,9 @@
 		43C38FA921E04C41002257FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C38FA721E04C41002257FA /* Main.storyboard */; };
 		43C38FAB21E04C42002257FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43C38FAA21E04C42002257FA /* Assets.xcassets */; };
 		43C38FAE21E04C42002257FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C38FAC21E04C42002257FA /* LaunchScreen.storyboard */; };
+		43C38FBB21E05005002257FA /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C38FBA21E05005002257FA /* Note.swift */; };
+		43C38FBD21E0505A002257FA /* LockStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C38FBC21E0505A002257FA /* LockStatus.swift */; };
+		43C38FBF21E050A8002257FA /* NoteObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C38FBE21E050A8002257FA /* NoteObjects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		43C38FAA21E04C42002257FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43C38FAD21E04C42002257FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43C38FAF21E04C42002257FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43C38FBA21E05005002257FA /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		43C38FBC21E0505A002257FA /* LockStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockStatus.swift; sourceTree = "<group>"; };
+		43C38FBE21E050A8002257FA /* NoteObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteObjects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 		43C38FB721E04CB3002257FA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				43C38FBA21E05005002257FA /* Note.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -93,6 +100,7 @@
 		43C38FB821E04CBB002257FA /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				43C38FBC21E0505A002257FA /* LockStatus.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -100,6 +108,7 @@
 		43C38FB921E04CC2002257FA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				43C38FBE21E050A8002257FA /* NoteObjects.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -175,8 +184,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C38FBF21E050A8002257FA /* NoteObjects.swift in Sources */,
+				43C38FBD21E0505A002257FA /* LockStatus.swift in Sources */,
 				43C38FA621E04C41002257FA /* NoteVC.swift in Sources */,
 				43C38FA421E04C41002257FA /* AppDelegate.swift in Sources */,
+				43C38FBB21E05005002257FA /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
