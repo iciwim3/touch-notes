@@ -18,17 +18,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ref-FW-g4O">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ref-FW-g4O">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="qLN-3b-qqQ">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="noteCell" rowHeight="75" id="qLN-3b-qqQ" customClass="NoteCell" customModule="touch_notes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qLN-3b-qqQ" id="HhP-TS-bZB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="74.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lockImage" translatesAutoresizingMaskIntoConstraints="NO" id="vbr-yx-olr">
+                                                    <rect key="frame" x="374" y="9.9999999999999964" width="30" height="56.666666666666657"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="Bg8-QI-uyj"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ut-4Q-gZp">
+                                                    <rect key="frame" x="20" y="7.9999999999999964" width="346" height="58.666666666666657"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="vbr-yx-olr" secondAttribute="bottom" constant="8" id="8e5-3X-Vlo"/>
+                                                <constraint firstItem="4Ut-4Q-gZp" firstAttribute="top" secondItem="HhP-TS-bZB" secondAttribute="top" constant="8" id="IsD-yb-4za"/>
+                                                <constraint firstAttribute="trailing" secondItem="vbr-yx-olr" secondAttribute="trailing" constant="10" id="NOi-gb-rP3"/>
+                                                <constraint firstItem="vbr-yx-olr" firstAttribute="leading" secondItem="4Ut-4Q-gZp" secondAttribute="trailing" constant="8" id="ORR-r2-DGd"/>
+                                                <constraint firstAttribute="bottom" secondItem="4Ut-4Q-gZp" secondAttribute="bottom" constant="8" id="TX6-bO-MYf"/>
+                                                <constraint firstItem="4Ut-4Q-gZp" firstAttribute="leading" secondItem="HhP-TS-bZB" secondAttribute="leading" constant="20" id="U89-AW-ZWq"/>
+                                                <constraint firstItem="vbr-yx-olr" firstAttribute="top" secondItem="HhP-TS-bZB" secondAttribute="top" constant="10" id="g7U-YC-FZZ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lockImageView" destination="vbr-yx-olr" id="vh3-iW-NvY"/>
+                                            <outlet property="messageLabel" destination="4Ut-4Q-gZp" id="Bwg-rs-bjM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -64,6 +91,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                             <color key="textColor" red="0.91201573610305786" green="0.67353683710098267" blue="0.27347099781036377" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </textAttributes>
                     </navigationBar>
@@ -77,4 +105,7 @@
             <point key="canvasLocation" x="361" y="133"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lockImage" width="30" height="30"/>
+    </resources>
 </document>
