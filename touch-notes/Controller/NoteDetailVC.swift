@@ -12,13 +12,20 @@ class NoteDetailVC: UIViewController {
     
     @IBOutlet weak var noteTextView: UITextView!
     
+    // An instance of note to display
+    var note: Note!
+    
+    // An index of note so we know which one to lock
+    var index: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        noteTextView.text = note.message
     }
     
     @IBAction func lockNoteButtonPressed(_ sender: Any) {
+        notesArray[index].lockStatus = .locked
+        navigationController?.popViewController(animated: true)
     }
     
 }

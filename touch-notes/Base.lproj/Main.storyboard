@@ -70,6 +70,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="SecureNotes" id="1fE-Sl-Lb3">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="3Ku-yV-S8O"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="EIF-cE-If8">
                             <color key="tintColor" red="0.91201573609999997" green="0.67353683710000001" blue="0.2734709978" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </barButtonItem>
@@ -85,7 +86,7 @@
         <!--Note DetailVC-->
         <scene sceneID="Q4t-EJ-QtF">
             <objects>
-                <viewController id="SQ7-aC-X9o" customClass="NoteDetailVC" customModule="touch_notes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoteDetailVC" id="SQ7-aC-X9o" customClass="NoteDetailVC" customModule="touch_notes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DKE-Nw-b5n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,6 +140,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="chG-OQ-WfK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.91201573609999997" green="0.67353683710000001" blue="0.2734709978" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                             <color key="textColor" red="0.91201573610305786" green="0.67353683710098267" blue="0.27347099781036377" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

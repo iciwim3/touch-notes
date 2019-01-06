@@ -19,8 +19,20 @@ class NoteVC: UIViewController {
         tableView.dataSource = self
         
     }
-
-
+    
+    // Function that is called when we tap on a cell
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // pass note and present view controller
+        pushNoteFor(indexPath: indexPath)
+    }
+    
+    // Allows the 'didSelectRowAt' function to work properly in this case. We pass a note and an indexPath.
+    func pushNoteFor(indexPath: IndexPath) {
+        guard let noteDetailVC = storyboard?.instantiateViewController(withIdentifier: "NoteDetailVC") as? NoteDetailVC else { return }
+        noteDetailVC.note = notesArray[indexPath.row]
+        noteDetailVC.index = indexPath.row
+        navigationController?.pushViewController(noteDetailVC, animated: true)
+    }
 }
 
 extension NoteVC: UITableViewDelegate, UITableViewDataSource {
@@ -39,9 +51,6 @@ extension NoteVC: UITableViewDelegate, UITableViewDataSource {
         cell.configureCell(note: note)
         return cell
     }
-    
-    
-    
     
 }
 
