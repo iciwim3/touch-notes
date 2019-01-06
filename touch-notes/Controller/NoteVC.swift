@@ -20,6 +20,11 @@ class NoteVC: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     // Function that is called when we tap on a cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // pass note and present view controller

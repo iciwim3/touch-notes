@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4323571621E17EA700FFA6DD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323571521E17EA700FFA6DD /* Helpers.swift */; };
 		43C38FA421E04C41002257FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C38FA321E04C41002257FA /* AppDelegate.swift */; };
 		43C38FA621E04C41002257FA /* NoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C38FA521E04C41002257FA /* NoteVC.swift */; };
 		43C38FA921E04C41002257FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C38FA721E04C41002257FA /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4323571521E17EA700FFA6DD /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		43C38FA021E04C41002257FA /* touch-notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "touch-notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C38FA321E04C41002257FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43C38FA521E04C41002257FA /* NoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVC.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				43C38FBE21E050A8002257FA /* NoteObjects.swift */,
+				4323571521E17EA700FFA6DD /* Helpers.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				43C38FBF21E050A8002257FA /* NoteObjects.swift in Sources */,
 				43C38FC321E05D62002257FA /* NoteDetailVC.swift in Sources */,
 				43C38FBD21E0505A002257FA /* LockStatus.swift in Sources */,
+				4323571621E17EA700FFA6DD /* Helpers.swift in Sources */,
 				43C38FA621E04C41002257FA /* NoteVC.swift in Sources */,
 				43C38FC121E055D9002257FA /* NoteCell.swift in Sources */,
 				43C38FA421E04C41002257FA /* AppDelegate.swift in Sources */,
